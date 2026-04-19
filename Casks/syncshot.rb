@@ -11,6 +11,16 @@ cask "syncshot" do
 
   app "SyncShot.app"
 
+  # SyncShot is ad-hoc signed (not notarized) during beta. Homebrew applies
+  # the quarantine xattr by default, which triggers Gatekeeper's
+  # "Apple could not verify" dialog on first launch. Strip it after install
+  # so the app opens cleanly.
+  postflight do
+    system_command "/usr/bin/xattr",
+                   args: ["-dr", "com.apple.quarantine", "#{appdir}/SyncShot.app"],
+                   sudo: false
+  end
+
   zap trash: [
     "~/Library/Application Support/SyncShot",
     "~/Library/Preferences/com.syncshot.app.plist",
