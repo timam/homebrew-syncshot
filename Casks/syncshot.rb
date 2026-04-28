@@ -1,6 +1,6 @@
 cask "syncshot" do
-  version "0.1.20"
-  sha256 "91da62d19968db6c771ce555d9092e16626f4f3c5c5fd2673178b2e1c343a18a"
+  version "0.1.21"
+  sha256 "e27c9124f0eaad8f8c01c6b3fdc1456c4fc149422d59857ba13e4a0c0f635d01"
 
   url "https://github.com/timam/syncshot-releases/releases/download/v#{version}/SyncShot.dmg"
   name "SyncShot"
