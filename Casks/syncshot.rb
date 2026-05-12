@@ -23,7 +23,7 @@ cask "syncshot" do
 
   zap trash: [
     "~/Library/Application Support/SyncShot",
-    "~/Library/Preferences/com.syncshot.app.plist",
-    "~/Library/Caches/com.syncshot.app",
+    "~/Library/Preferences/io.syncshot.app.plist",
+    "~/Library/Caches/io.syncshot.app",
   ]
 end
